@@ -1,5 +1,5 @@
 Build.PL
-inc/Alien/UnRTF/ModuleBuild.pm
-lib/Alien/UnRTF.pm
+inc/Alien/SLOCCount/ModuleBuild.pm
+lib/Alien/SLOCCount.pm
 MANIFEST			This list of files
 t/00_use.t

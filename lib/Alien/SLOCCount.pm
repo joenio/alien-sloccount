@@ -1,28 +1,28 @@
-package Alien::UnRTF;
+package Alien::SLOCCount;
 use strict;
 use warnings;
  
-our $VERSION = '0.02';
+our $VERSION = '0.01';
 
 use parent 'Alien::Base';
 
 =head1 NAME
 
-Alien::UnRTF - Build and make available the unrtf tool
+Alien::SLOCCount - Build and make available the sloccount tool
 
 =head1 SYNOPSIS
 
 From a Perl script
 
-  use Alien::UnRTF;
+  use Alien::SLOCCount;
   use Env qw( @PATH );
-  unshift @PATH, Alien::UnRTF->bin_dir;  # unrtf is now in your path
+  unshift @PATH, Alien::SLOCCount->bin_dir;  # sloccount is now in your path
 
 From Alien::Base Build.PL
 
   use Alien::Base::ModuleBuild;
   my $builder = Module::Build->new(
-    alien_bin_requires => [ 'Alien::UnRTF' ],
+    alien_bin_requires => [ 'Alien::SLOCCount' ],
   );
   $builder->create_build_script;
 
@@ -30,9 +30,9 @@ From Alien::Base Build.PL
 
 B<**this is a beta release**>
 
-This distribution installs L<UnRTF|https://www.gnu.org/software/unrtf> so that
+This distribution installs L<SLOCCount|http://www.dwheeler.com/sloccount/> so that
 it can be used by other Perl distributions. If already installed for your
-operating system, and it can be found, this distribution will use the UnRTF
+operating system, and it can be found, this distribution will use the SLOCCount
 that comes with your operating system, otherwise it will download it from the
 Internet, build and install it from you.
 
