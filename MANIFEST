@@ -1,0 +1,5 @@
+Build.PL
+inc/Alien/UnRTF/ModuleBuild.pm
+lib/Alien/UnRTF.pm
+MANIFEST			This list of files
+t/00_use.t
