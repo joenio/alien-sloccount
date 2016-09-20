@@ -25,9 +25,13 @@ sub alien_bin_requires {
   }
 }
 
-#sub alien_build_commands {
-#  [ 'sh bootstrap', '%c --prefix=%s', 'make' ];
-#}
+sub alien_build_commands {
+  [ 'echo mkdir -p %s', 'make' ];
+}
+
+sub alien_install_commands {
+  [ 'mkdir -p %s', 'make install PREFIX=%s' ];
+}
 
 sub alien_repository {
   {
