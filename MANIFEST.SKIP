@@ -83,3 +83,6 @@
 # Avoid cpan local:lib installed modules
 \B\.cpan\b
 \bperl5\b
+
+\b_alien\b
+\b_share\b
