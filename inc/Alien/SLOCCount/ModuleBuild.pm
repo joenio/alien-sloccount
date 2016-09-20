@@ -26,11 +26,11 @@ sub alien_bin_requires {
 }
 
 sub alien_build_commands {
-  [ 'echo mkdir -p %s', 'make' ];
+  [ 'make' ];
 }
 
 sub alien_install_commands {
-  [ 'mkdir -p %s', 'make install PREFIX=%s' ];
+  [ 'mkdir -p %s/bin', 'make install PREFIX=%s' ];
 }
 
 sub alien_repository {
