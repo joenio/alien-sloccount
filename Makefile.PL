@@ -1,24 +1,21 @@
-use strict;
-use lib 'inc';
-use Alien::SLOCCount::ModuleBuild;
- 
-my $builder = Alien::SLOCCount::ModuleBuild->new(
-  module_name => 'Alien::SLOCCount',
-  dist_abstract => 'Build and make available the sloccount tool',
-  configure_requires => {
-    'Module::Build' => 0.42,
-    'Alien::Base::ModuleBuild' => 0,
-  },
-  requires => {
-    'Alien::Base' => 0,
-  },
-  dist_author => 'Joenio Costa <joenio@joenio.me>',
-  license => 'perl',
-  meta_merge => {
+use ExtUtils::MakeMaker;
+use Alien::Build::MM;
+
+my $abmm = Alien::Build::MM->new;
+
+WriteMakefile($abmm->mm_args(
+  ABSTRACT => 'Build and make available the sloccount tool',
+  NAME     => 'Alien::SLOCCount',
+  VERSION_FROM => 'lib/Alien/SLOCCount.pm',
+  AUTHOR   => 'Joenio Costa <joenio@joenio.me>',
+  META_MERGE => {
     resources => {
       repository => 'http://github.com/joenio/alien-sloccount'
     }
   },
-);
+  LICENSE => 'perl',
+));
  
-$builder->create_build_script;
+sub MY::postamble {
+  $abmm->mm_postamble;
+}
