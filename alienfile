@@ -11,8 +11,7 @@ share {
   extract [ 'tar zxf %{.install.download}' ];
    
   build [
-    [ './configure --prefix=%{.install.prefix}' ],
-    [ '%{make}' ],
+    [ '%{make} EXE_SUFFIX=.exe' ],
     [ '%{make} install' ],
   ];
    
