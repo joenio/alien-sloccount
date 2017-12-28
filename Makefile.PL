@@ -6,6 +6,7 @@ my $abmm = Alien::Build::MM->new;
 WriteMakefile($abmm->mm_args(
   ABSTRACT => 'Build and make available the sloccount tool',
   NAME     => 'Alien::SLOCCount',
+  DISTNAME => 'Alien-SLOCCount',
   VERSION_FROM => 'lib/Alien/SLOCCount.pm',
   AUTHOR   => 'Joenio Costa <joenio@joenio.me>',
   META_MERGE => {
