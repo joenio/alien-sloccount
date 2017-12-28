@@ -1,10 +1,11 @@
 package Alien::SLOCCount;
 use strict;
 use warnings;
- 
-our $VERSION = '0.01';
-
+#use base qw( Alien::Base );
 use parent 'Alien::Base';
+ 
+
+#our $VERSION = '0.01';
 
 =head1 NAME
 
@@ -14,17 +15,11 @@ Alien::SLOCCount - Build and make available the sloccount tool
 
 From a Perl script
 
-  use Alien::SLOCCount;
-  use Env qw( @PATH );
-  unshift @PATH, Alien::SLOCCount->bin_dir;  # sloccount is now in your path
+...
 
 From Alien::Base Build.PL
 
-  use Alien::Base::ModuleBuild;
-  my $builder = Module::Build->new(
-    alien_bin_requires => [ 'Alien::SLOCCount' ],
-  );
-  $builder->create_build_script;
+...
 
 =head1 DESCRIPTION
 
@@ -91,7 +86,7 @@ Joenio Costa <joenio@joenio.me>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2016 by Joenio Costa.
+This software is copyright (c) 2017 by Joenio Costa.
 
 This is free software; you can redistribute it and/or modify it under the same
 terms as the Perl 5 programming language system itself.
