@@ -1,11 +1,9 @@
 package Alien::SLOCCount;
 use strict;
 use warnings;
-#use base qw( Alien::Base );
 use parent 'Alien::Base';
  
-
-#our $VERSION = '0.01';
+our $VERSION = '0.01';
 
 =head1 NAME
 
