@@ -16,7 +16,7 @@ my $builder = Alien::SLOCCount::ModuleBuild->new(
   license => 'perl',
   meta_merge => {
     resources => {
-      repository => 'http://github.com/joenio/p5-alien-sloccount'
+      repository => 'http://github.com/joenio/alien-sloccount'
     }
   },
 );
