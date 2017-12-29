@@ -11,17 +11,24 @@ Alien::SLOCCount - Build and make available the sloccount tool
 
 =head1 SYNOPSIS
 
-From a Perl script
+From your Perl script:
 
-...
+  use Alien::SLOCCount;
+  use Env qw( @PATH );
 
-From Alien::Base Build.PL
+  unshift @PATH, Alien::SLOCCount->bin_dir; # sloccount is now in your path
+  system 'sloccount', ...;
 
-...
+From alienfile:
+
+  share {
+    requires 'Alien::SLOCCount';
+    build [
+      '%{sloccount} ...',
+    ];
+  };
 
 =head1 DESCRIPTION
-
-B<**this is a beta release**>
 
 This distribution installs L<SLOCCount|http://www.dwheeler.com/sloccount/> so that
 it can be used by other Perl distributions. If already installed for your

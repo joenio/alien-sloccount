@@ -3,32 +3,13 @@ use alienfile;
 probe [ 'which sloccount' ];
  
 share {
-   
   start_url 'https://www.dwheeler.com/sloccount/sloccount-2.26.tar.gz';
-   
   download [ 'wget %{.meta.start_url}' ];
-   
   extract [ 'tar zxf %{.install.download}' ];
-   
   build [
     [ '%{make} EXE_SUFFIX=.exe' ],
     [ '%{make} install' ],
   ];
-   
 };
  
-gather [
-  [ 'pkg-config --modversion libfoo', \'%{.runtime.version}' ],
-  [ 'pkg-config --cflags     libfoo', \'%{.runtime.cflags}'  ],
-  [ 'pkg-config --libs       libfoo', \'%{.runtime.libs}'    ],
-];
-
-
-#sub alien_bin_requires {
-#  {
-#    'Alien::Autotools' => 0,
-#    'Alien::flex' => 0,
-#  }
-#}
-
 # vim: ft=perl
