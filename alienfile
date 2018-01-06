@@ -1,7 +1,7 @@
 use alienfile;
- 
+
 probe [ 'which sloccount' ];
- 
+
 share {
   requires 'Alien::flex';
   start_url 'https://www.dwheeler.com/sloccount/sloccount-2.26.tar.gz';
@@ -10,6 +10,7 @@ share {
   extract [ 'tar zxf %{.install.download}' ];
   build [
     [ '%{make} EXE_SUFFIX=.exe' ],
+    [ 'mkdir -p %{alien.install.prefix}/bin' ],
     [ '%{make} install PREFIX=%{alien.install.prefix}' ],
   ];
 };
