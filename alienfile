@@ -9,7 +9,7 @@ share {
   download [ 'wget --no-check-certificate %{.meta.start_url}' ];
   extract [ 'tar zxf %{.install.download}' ];
   build [
-    [ '%{make} EXE_SUFFIX=.exe' ],
+    [ "%{make} EXE_SUFFIX=.exe CC='cc -Wall'" ],
     [ 'mkdir -p %{alien.install.prefix}/bin' ],
     [ '%{make} install PREFIX=%{alien.install.prefix}' ],
   ];
