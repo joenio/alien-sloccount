@@ -12,7 +12,7 @@ share {
   build [
     [ "%{make} EXE_SUFFIX=.exe CC='cc -Wall'" ],
     [ 'mkdir -p %{alien.install.prefix}/bin' ],
-    [ '%{make} install PREFIX=%{alien.install.prefix}' ],
+    [ "%{make} install PREFIX=%{alien.install.prefix} CC='cc -Wall'" ],
   ];
 };
  
