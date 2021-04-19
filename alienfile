@@ -4,7 +4,7 @@ probe [ 'which sloccount' ];
 
 share {
   requires 'Alien::flex';
-  start_url 'https://www.dwheeler.com/sloccount/sloccount-2.26.tar.gz';
+  start_url 'https://dwheeler.com/sloccount/sloccount-2.26.tar.gz';
   download [ 'wget %{.meta.start_url}' ];
   download [ 'wget --no-check-certificate %{.meta.start_url}' ];
   download [ 'curl %{.meta.start_url} -o sloccount-2.26.tar.gz' ];
